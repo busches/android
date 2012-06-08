@@ -27,6 +27,7 @@
   <project path="device/google/accessory/arduino" name="device/google/accessory/arduino" remote="aosp" revision="refs/tags/android-4.0.4_r2.1" />
   <project path="device/google/accessory/demokit" name="device/google/accessory/demokit" remote="aosp" revision="refs/tags/android-4.0.4_r2.1" />
   <project path="device/htc/common" name="Evervolv/android_device_htc_common" revision="ics"/>
+  <project path="device/htc/qsd8k-common" name="Evervolv/android_device_htc_qsd8k-common" revision="ics"/>
   <project path="device/htc/inc" name="busches/android_device_htc_inc" />  
   <project path="device/sample" name="device/sample" remote="aosp" revision="refs/tags/android-4.0.4_r2.1" />
   <project path="device/ti/panda" name="device/ti/panda" remote="aosp" revision="refs/tags/android-4.0.4_r2.1" />
@@ -252,7 +253,7 @@
   <project path="packages/wallpapers/PhaseBeam" name="platform/packages/wallpapers/PhaseBeam" remote="aosp" revision="refs/tags/android-4.0.4_r2.1" />
   <project path="prebuilt" name="CyanogenMod/android_prebuilt" />
   <project path="vendor/cm" name="busches/android_vendor_cm" />
-  <project path="vendor/htc" name="Evervolv/android_vendor_htc" />  
+  <project path="vendor/htc" name="Evervolv/android_vendor_htc" />
   <project path="vendor/qcom/opensource/omx/mm-audio" name="CyanogenMod/android_vendor_qcom_opensource_omx_mm-audio" />
   <project path="vendor/qcom/opensource/omx/mm-core" name="Evervolv/android_vendor_qcom_opensource_omx_mm-core" />
   <project path="vendor/qcom/opensource/omx/mm-video" name="Evervolv/android_vendor_qcom_opensource_omx_mm-video" />
@@ -269,6 +270,8 @@
   <project path="system/netd" name="CyanogenMod/android_system_netd" />
   <project path="system/su" name="CyanogenMod/android_system_su" />
   <project path="system/vold" name="CyanogenMod/android_system_vold" />
+  
+  
 
   <project path="android" name="CyanogenMod/android" />
 </manifest>
