@@ -1,50 +1,28 @@
-CyanogenMod
+CyanogenMod 10 for the Inc
 ===========
 
-Submitting Patches
+Credit
 ------------------
-Patches are always welcome!  Please submit your patches via CyanogenMod Gerrit!
-You can do this by using these commands:
 
-    (From root android directory)
-    . build/envsetup.sh
-    (Go to repo you are patching, make your changes and commit)
-    cmgerrit <for(new)/changes(patch set)> <branch/change-id> 
+All credit goes to [Team CyanogenMod](http://www.cyanogenmod.com/) and [Team Evervolv](http://www.evervolv.com/)
 
-    repo start jellybean .
-    (Make your changes and commit)
-    repo upload .
-Note: "." meaning current directory
-For more help on using this tool, use this command: repo help upload
-
-Make your changes and commit with a detailed message, starting with what you are working with (i.e. vision: Update Kernel)
-Commit your patches in a single commit. Squash multiple commit using this command: git rebase -i HEAD~<# of commits>
-
-To view the status of your and others' patches, visit [CyanogenMod Code Review](http://review.cyanogenmod.com/)
-
+CM provides the base functionality and EV provides continued support for the Inc
 
 Getting Started
 ---------------
 
-To get started with Android/CyanogenMod, you'll need to get
-familiar with [Git and Repo](http://source.android.com/download/using-repo).
+If you want to build, follow the standard instructions of settings up a repo using this as the manifest. You may alter this manifest and customize it how you please.
 
-To initialize your local repository using the CyanogenMod trees, use a command like this:
 
-    repo init -u git://github.com/CyanogenMod/android.git -b jellybean
-
-Then to sync up:
-
-    repo sync
-
-Please see the [CyanogenMod Wiki](http://wiki.cyanogenmod.com/) for building instructions.
-
-For more information on this Github Organization and how it is structured, 
-please [read the wiki article](http://wiki.cyanogenmod.com/index.php/Github_Organization)
-
-Buildbot
+Commit Reverts
 --------
 
-All supported devices are built nightly and periodically as changes are committed to ensure the source trees remain buildable.
+The following are commits you need to revert that prevent the rom from working correctly.
 
-You can view the current build statuses at [CyanogenMod Jenkins](http://jenkins.cyanogenmod.com/)
+``` git
+# Fix for Allow 3+ undequeued buffers for SurfaceTextureLayer
+# This causes the screen to "broken"
+cd frameworks/native
+git reset HEAD --hard
+git revert 3c77f875627a504ec8e52a341ce654a4e16a3838 7523410a5d3721e84fe96464ff2cf61482137c58 --no-edit
+```
