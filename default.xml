@@ -217,12 +217,12 @@
   <project path="hardware/libhardware" name="CyanogenMod/android_hardware_libhardware" />
   <project path="hardware/libhardware_legacy" name="CyanogenMod/android_hardware_libhardware_legacy" />
   <project path="hardware/msm7k" name="CyanogenMod/android_hardware_msm7k" />
-  <project path="hardware/qcom/audio" name="Evervolv/android_hardware_qcom_audio" />
-  <project path="hardware/qcom/camera" name="Evervolv/android_hardware_qcom_camera" />
-  <project path="hardware/qcom/display" name="Evervolv/android_hardware_qcom_display" />
-  <project path="hardware/qcom/gps" name="Evervolv/android_hardware_qcom_gps" />
-  <project path="hardware/qcom/media" name="Evervolv/android_hardware_qcom_media" />
-  <project path="hardware/ril" name="Evervolv/android_hardware_ril" />
+  <project path="hardware/qcom/audio" name="CyanogenMod/android_hardware_qcom_audio" />
+  <project path="hardware/qcom/camera" name="CyanogenMod/android_hardware_qcom_camera" />
+  <project path="hardware/qcom/display" name="CyanogenMod/android_hardware_qcom_display" />
+  <project path="hardware/qcom/gps" name="CyanogenMod/android_hardware_qcom_gps" />
+  <project path="hardware/qcom/media" name="CyanogenMod/android_hardware_qcom_media" />
+  <project path="hardware/ril" name="CyanogenMod/android_hardware_ril" />
   <project path="hardware/ti/omap3" name="CyanogenMod/android_hardware_ti_omap3" />
   <project path="hardware/ti/omap4xxx" name="CyanogenMod/android_hardware_ti_omap4xxx" />
   <project path="hardware/ti/wlan" name="CyanogenMod/android_hardware_ti_wlan" />
@@ -335,6 +335,25 @@
   <project path="kernel/htc/qsd8k" name="Evervolv/android_kernel_htc_qsd8k" />
   <project path="vendor/htc" name="Evervolv/android_vendor_htc" />
   
+  <!-- Replaced -->
+  <remove-project path="hardware/qcom/audio" name="CyanogenMod/android_hardware_qcom_audio" />
+  <project path="hardware/qcom/audio" name="Evervolv/android_hardware_qcom_audio" />
+  
+  <remove-project path="hardware/qcom/camera" name="CyanogenMod/android_hardware_qcom_camera" />
+  <project path="hardware/qcom/camera" name="Evervolv/android_hardware_qcom_camera" />  
+  
+  <remove-project path="hardware/qcom/display" name="CyanogenMod/android_hardware_qcom_display" />
+  <project path="hardware/qcom/display" name="Evervolv/android_hardware_qcom_display" />
+  
+  <remove-project path="hardware/qcom/gps" name="CyanogenMod/android_hardware_qcom_gps" />
+  <project path="hardware/qcom/gps" name="Evervolv/android_hardware_qcom_gps" />
+  
+  <remove-project path="hardware/qcom/media" name="CyanogenMod/android_hardware_qcom_media" />
+  <project path="hardware/qcom/media" name="Evervolv/android_hardware_qcom_media" />
+  
+  <remove-project path="hardware/ril" name="CyanogenMod/android_hardware_ril" />
+  <project path="hardware/ril" name="Evervolv/android_hardware_ril" />
+   
   <!-- Removed -->
   <remove-project path="packages/apps/Apollo" name="CyanogenMod/android_packages_apps_Apollo" />
   <remove-project path="packages/apps/CMWallpapers" name="CyanogenMod/android_packages_apps_CMWallpapers" />
