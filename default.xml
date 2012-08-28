@@ -341,10 +341,7 @@
   
   <remove-project path="hardware/qcom/camera" name="CyanogenMod/android_hardware_qcom_camera" />
   <project path="hardware/qcom/camera" name="Evervolv/android_hardware_qcom_camera" />  
-  
-  <remove-project path="hardware/qcom/display" name="CyanogenMod/android_hardware_qcom_display" />
-  <project path="hardware/qcom/display" name="Evervolv/android_hardware_qcom_display" />
-  
+    
   <remove-project path="hardware/qcom/gps" name="CyanogenMod/android_hardware_qcom_gps" />
   <project path="hardware/qcom/gps" name="Evervolv/android_hardware_qcom_gps" />
   
