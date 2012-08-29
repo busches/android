@@ -20,9 +20,25 @@ Commit Reverts
 The following are commits you need to revert that prevent the rom from working correctly.
 
 ``` git
-# Fix for Allow 3+ undequeued buffers for SurfaceTextureLayer
-# This causes the screen to "broken"
+# Fix for broken screen; only displays the loading symbol on boot, then boot animation, then symbol, repeat
+
 cd frameworks/native
-git reset HEAD --hard
-git revert 3c77f875627a504ec8e52a341ce654a4e16a3838 7523410a5d3721e84fe96464ff2cf61482137c58 --no-edit
+# surfacetexture: Add API to set the min undequeued buffer count
+git revert 7523410a5d3721e84fe96464ff2cf61482137c58 --no-edit 
+#  Allow 3+ undequeued buffers for SurfaceTextureLayer
+git revert 3c77f875627a504ec8e52a341ce654a4e16a3838 --no-edit
+
+# Fix for google voice search crashing
+
+cd frameworks/av
+# audio: Unbreak ALL the things 
+git revert d34a90fe138fae3dce2b328ea6fe2308a5457eeb --no-edit
+# stagefright: Build QCOM players for all QCOM targets
+git revert 91ac8eb69d7c2b86df7a2b060a5a5508fa21e1ee --no-edit
+# audio: Fix another ifdef fail.
+git revert 2deab264a64c1973b127ef53baeb9941ee98fc98 --no-edit
+# audioflinger: fix bad parentheses placement
+git revert e77b10d85bae173716c0548d4f3153c495291ffe --no-edit
+# frameworks/av: Implement DirectTrack and DirectTrackClient
+git revert 0924bf0ca9cce5a9ca0e4d9f1f6670b11befd2f0 --no-edit
 ```
