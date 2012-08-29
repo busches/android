@@ -336,9 +336,6 @@
   <project path="vendor/htc" name="Evervolv/android_vendor_htc" />
   
   <!-- Replaced -->
-  <remove-project path="hardware/libhardware_legacy" name="CyanogenMod/android_hardware_libhardware_legacy" />
-  <project path="hardware/libhardware_legacy" name="Evervolv/android_hardware_libhardware_legacy" />
-  
   <remove-project path="hardware/qcom/audio" name="CyanogenMod/android_hardware_qcom_audio" />
   <project path="hardware/qcom/audio" name="Evervolv/android_hardware_qcom_audio" />
   
@@ -353,7 +350,7 @@
   
   <remove-project path="hardware/ril" name="CyanogenMod/android_hardware_ril" />
   <project path="hardware/ril" name="Evervolv/android_hardware_ril" />
-     
+   
   <!-- Removed -->
   <remove-project path="packages/apps/Apollo" name="CyanogenMod/android_packages_apps_Apollo" />
   <remove-project path="packages/apps/CMWallpapers" name="CyanogenMod/android_packages_apps_CMWallpapers" />
