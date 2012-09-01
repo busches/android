@@ -31,6 +31,10 @@ git revert 3c77f875627a504ec8e52a341ce654a4e16a3838 --no-edit
 # Fix for google voice search crashing
 
 cd frameworks/av
+# libstagefright: Fix crash during next clip playback
+git revert 031c2d436643c6dce2b7734ecefbe64ce2f9e3c5 --no-edit
+# frameworks/av: Use software decoders for LPA clips
+git revert 29fa8b7ae2203be53f7c3928ccb83c94189f09c2 --no-edit
 # audio: Unbreak ALL the things 
 git revert d34a90fe138fae3dce2b328ea6fe2308a5457eeb --no-edit
 # stagefright: Build QCOM players for all QCOM targets
@@ -41,6 +45,7 @@ git revert 2deab264a64c1973b127ef53baeb9941ee98fc98 --no-edit
 git revert e77b10d85bae173716c0548d4f3153c495291ffe --no-edit
 # frameworks/av: Implement DirectTrack and DirectTrackClient
 git revert 0924bf0ca9cce5a9ca0e4d9f1f6670b11befd2f0 --no-edit
+
 
 # More fixes for voice search crashing
 
