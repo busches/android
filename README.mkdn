@@ -20,38 +20,8 @@ Commit Reverts
 The following are commits you need to revert that prevent the rom from working correctly.
 
 ``` git
-# Fix for broken screen; only displays the loading symbol on boot, then boot animation, then symbol, repeat
-
-cd frameworks/native
-# surfacetexture: Add API to set the min undequeued buffer count
-git revert 7523410a5d3721e84fe96464ff2cf61482137c58 --no-edit 
-#  Allow 3+ undequeued buffers for SurfaceTextureLayer
-git revert 3c77f875627a504ec8e52a341ce654a4e16a3838 --no-edit
-
-# Fix for google voice search crashing
-
-cd frameworks/av
-# libstagefright: Fix crash during next clip playback
-git revert 031c2d436643c6dce2b7734ecefbe64ce2f9e3c5 --no-edit
-# frameworks/av: Use software decoders for LPA clips
-git revert 29fa8b7ae2203be53f7c3928ccb83c94189f09c2 --no-edit
-# audio: Unbreak ALL the things 
-git revert d34a90fe138fae3dce2b328ea6fe2308a5457eeb --no-edit
-# stagefright: Build QCOM players for all QCOM targets
-git revert 91ac8eb69d7c2b86df7a2b060a5a5508fa21e1ee --no-edit
-# audio: Fix another ifdef fail.
-git revert 2deab264a64c1973b127ef53baeb9941ee98fc98 --no-edit
-# audioflinger: fix bad parentheses placement
-git revert e77b10d85bae173716c0548d4f3153c495291ffe --no-edit
-# frameworks/av: Implement DirectTrack and DirectTrackClient
-git revert 0924bf0ca9cce5a9ca0e4d9f1f6670b11befd2f0 --no-edit
-
-
-# More fixes for voice search crashing
-
-cd hardware/libhardware_legacy/
-# audio: Add missing enum
-git revert 12c07ca06b41e1346874574747c401f6627ebe38 --no-edit
-# audio: Support for more QCOM audio features
-git revert 6f65b558e970cd1ad8b228e866a824a8ef7e9560 --no-edit
+# These break the build
+cd hardware/qcom/display
+git revert 5fcbecb --no-edit
+git revert 48bcc282519cfb68ad4c66866b4f641d74a33867 --no-edit
 ```
