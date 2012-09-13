@@ -336,6 +336,12 @@
   <project path="vendor/htc" name="Evervolv/android_vendor_htc" />
   
   <!-- Replaced -->
+  <remove-project path="frameworks/av" name="CyanogenMod/android_frameworks_av" />
+  <project path="frameworks/av" name="Evervolv/android_frameworks_av" />
+
+  <remove-project path="frameworks/native" name="CyanogenMod/android_frameworks_native" />  
+  <project path="frameworks/native" name="Evervolv/android_frameworks_native" />
+
   <remove-project path="hardware/qcom/audio" name="CyanogenMod/android_hardware_qcom_audio" />
   <project path="hardware/qcom/audio" name="Evervolv/android_hardware_qcom_audio" />
   
