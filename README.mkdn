@@ -22,6 +22,10 @@ The following are commits you need to revert that prevent the rom from working c
 ``` git
 # These break the build
 cd hardware/qcom/display
+# hwc/overlay: Add premultiplied alpha support.
+git revert 89770608f01a789558dce865c6c7799bde30d181 --no-edit
+# hwc: Set premultiplied alpha flag appropriately
 git revert 5fcbecb --no-edit
+# hwc: Enable MDP_BACKEND_COMPOSITION
 git revert 48bcc282519cfb68ad4c66866b4f641d74a33867 --no-edit
 ```
