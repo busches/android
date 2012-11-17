@@ -14,18 +14,6 @@ Getting Started
 If you want to build, follow the standard instructions of settings up a repo using this as the manifest. You may alter this manifest and customize it how you please.
 
 
-Commit Reverts
---------
 
-The following are commits you need to revert that prevent the rom from working correctly.
 
-``` git
-# These break the build
-cd hardware/qcom/display
-# hwc/overlay: Add premultiplied alpha support.
-git revert 89770608f01a789558dce865c6c7799bde30d181 --no-edit
-# hwc: Set premultiplied alpha flag appropriately
-git revert 5fcbecb --no-edit
-# hwc: Enable MDP_BACKEND_COMPOSITION
-git revert 48bcc282519cfb68ad4c66866b4f641d74a33867 --no-edit
-```
+
